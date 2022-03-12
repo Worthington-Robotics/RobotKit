@@ -28,12 +28,18 @@ def appendLine(path, msgType, rosType, file, comment):
 	global fileAdditions
 	defined = isDefined(path)
 	if not(defined):
-		line = msgType + " " + rosTypes[rosType] + ' ' + path + ', a ' + rosType + ' in ' + file + ' ' + comment + '\n\n'
-		outFile.write(line)
-		print('Added ' + path)
-		fileAdditions = fileAdditions + 1
+		try:
+			line = msgType + " " + rosTypes[rosType] + ' ' + path + ', a ' + rosType + ' in ' + file + ' ' + comment + '\n\n'
+			outFile.write(line)
+			print('Added ' + path)
+			fileAdditions = fileAdditions + 1
+		except:
+			print('Object did not load correctly')
 
 def fixPath(path):
+	#print(path)
+	if path == '' or path == None:
+		return "'ERROR'"
 	if ' ' in path:
 		path = path[0:path.find(' ')]
 	if path[0] == '"':
@@ -56,7 +62,10 @@ def searchFile(path):
 						comment = '    ' + cut[cut.find('#'):]
 					else:
 						comment = ''
-					appendLine(fixPath(args[1]), args[0], rosType, path[1:], comment)
+					try:
+						appendLine(fixPath(args[1]), args[0], rosType, path[1:], comment)
+					except:
+						print('Object did not load correctly')
 					#print(args)
 		elif path[-4:] == '.cpp':
 			if '->create_' in line:
@@ -70,7 +79,10 @@ def searchFile(path):
 					comment = ''
 				msgType = cut[cut.find('<'):cut.find('>')]
 				msgType = msgType[msgType.rfind(':') + 1:]
-				appendLine(fixPath(args[0]), msgType, rosType, path[1:], comment)
+				try:
+					appendLine(fixPath(args[0]), msgType, rosType, path[1:], comment)
+				except:
+					print('Object did not load correctly')
 				#print(args)
 	file.close()
 

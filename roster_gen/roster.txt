@@ -1,101 +1,160 @@
-Bool topic '/sys/reset', a subscription in /2022RobotCode/src/main/cpp/SubsystemManager.cpp 
+Bool topic '/shooter/driverrequestshoot', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/state.py 
 
-Bool topic '/sys/debug', a subscription in /2022RobotCode/src/main/cpp/SubsystemManager.cpp 
+Bool topic '/shooter/checktargetexists', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/state.py 
 
-Int16 topic '/battery/idle', a subscription in /2022RobotCode/src/main/cpp/subsystems/Battery.cpp 
+Float32 topic '/shooter/range'., a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/state.py 
 
-Int16 topic '/battery/idle', a subscription in /2022RobotCode/src/main/cpp/subsystems/Battery.cpp 
+Float32 topic '/shooter/angleoffset'., a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/state.py 
 
-Int16 topic '/battery/idle', a publisher in /2022RobotCode/src/main/cpp/subsystems/Battery.cpp 
+StringService service '/shooter/hood/adjust', a client in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/state.py 
 
-Imu topic '/drive/imu', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+StringService service '/shooter/drivetrain/rotate', a client in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/state.py 
 
-Twist topic '/drive/vel', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Joy topic '/sticks/stick0', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Pose2D topic '/drive/pose', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Joy topic '/sticks/stick1', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Float32 topic '/drive/motor_goal', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Float32 topic '/externIO/external_tof/distance', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Twist topic '/drive/auto_twist_demand', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Float32 topic '/externIO/internal_tof/distance', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Waypoint topic '/drive/lookahead_point', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+JointState topic '/externIO/flywheel_motor/state', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Float32 topic '/drive/current_angle', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+JointState topic '/externIO/hood_motor/state', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Float32 topic '/drive/desired_angle', a publisher in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Float32 topic '/limelight/angle_offset', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-StringService service '/drive/start_path', a service in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Float32 topic '/limelight/range', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-JointTrajectory topic '/drive/active_traj', a subscription in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Float32 topic '/limelight/range_adjustment', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Twist topic '/drive/velocity_twist', a subscription in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Int16,'/actions/intake_indexer' topic self.hoodBackbone.intakeIndexerUInput, a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py     #
 
-Joy topic DRIVE_STICK_TOPIC, a subscription in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Float32 topic '/drive/heading_control', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Int16 topic '/drive/drive_mode', a subscription in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+Bool topic '/externIO/hood_motor/is_reset', a subscription in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Float32 topic '/drive/heading_setpoint', a subscription in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+MotorMsg topic '/externIO/hood_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Bool topic '/drive/heading_control', a subscription in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+MotorMsg topic '/externIO/flywheel_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-GetPath service '/get_path', a client in /2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+MotorMsg topic '/externIO/delivery_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-SetPIDFGains service '/externIO/', a service in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+MotorMsg topic '/externIO/indexer_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-JointState topic '/externIO/', a publisher in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+MotorMsg topic '/externIO/intake_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-MotorMsg topic '/externIO/', a subscription in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+Int16 topic '/externIO/climber_l_pin_solenoid/state', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Int16 topic '/externIO/climber_solenoid_lr/state', a subscription in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+Int16 topic '/externIO/climber_l_main_solenoid/state', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Int16 topic '/externIO/climber_solenoid_c/state', a subscription in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+Int16 topic '/externIO/climber_c_pin_solenoid/state', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Int16 topic '/externIO/intake_solenoid/state', a subscription in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+Int16 topic '/externIO/climber_c_main_solenoid/state', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Float32 topic '/externIO/external_tof/distance', a publisher in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+Int16 topic '/externIO/climber_r_pin_solenoid/state', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Float32 topic '/externIO/internal_tof/distance', a publisher in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+Int16 topic '/externIO/climber_r_main_solenoid/state', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Bool topic '/externIO/upper_hood/limit_switch', a publisher in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+MotorMsg topic '/externIO/climber_l_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Bool topic '/externIO/lower_hood/limit_switch', a publisher in /2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+MotorMsg topic '/externIO/climber_c_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Int16 topic '/lights/mode', a subscription in /2022RobotCode/src/main/cpp/subsystems/LightBar.cpp 
+MotorMsg topic '/externIO/climber_r_motor/demand', a publisher in /worbots_code/copro_code/install/shooter_intake/lib/python3.8/site-packages/shooter_intake/shooter.py 
 
-Joy topic '/sticks/stick', a publisher in /2022RobotCode/src/main/cpp/subsystems/userinput.cpp 
+RunTree service '/auto/exec', a client in /worbots_code/copro_code/install/tree_runner/lib/python3.8/site-packages/tree_runner/tree_runner.py 
 
-Joy topic '/sticks/stick1', a subscription in /shooter_intake/shooter_intake/shooter.py 
+Float32 topic 'limelight/angle_offset', a publisher in /worbots_code/copro_code/install/limelightdriver/lib/python3.8/site-packages/limelightdriver/limelightdriver.py 
 
-Float32 topic '/externIO/external_tof/distance', a subscription in /shooter_intake/shooter_intake/shooter.py 
+StringService service 'limelight/set_light_state', a service in /worbots_code/copro_code/install/limelightdriver/lib/python3.8/site-packages/limelightdriver/limelightdriver.py 
 
-Float32 topic '/externIO/internal_tof/distance', a subscription in /shooter_intake/shooter_intake/shooter.py 
+StringService service 'limelight/set_snapshot_state', a service in /worbots_code/copro_code/install/limelightdriver/lib/python3.8/site-packages/limelightdriver/limelightdriver.py 
 
-JointState topic '/externIO/flywheel_motor/state', a subscription in /shooter_intake/shooter_intake/shooter.py 
+Float32 topic 'limelight/range', a publisher in /worbots_code/copro_code/install/limelightdriver/lib/python3.8/site-packages/limelightdriver/limelightdriver.py 
 
-JointState topic '/externIO/hood_motor/state', a subscription in /shooter_intake/shooter_intake/shooter.py 
+BakePath service '/bake_path', a client in /worbots_code/copro_code/install/rospathgen/lib/python3.8/site-packages/rospathgen/pathtester.py 
 
-Float32 topic '/externIO/intake_motor/user_input', a subscription in /shooter_intake/shooter_intake/shooter.py 
+GetPath service '/get_path', a client in /worbots_code/copro_code/install/rospathgen/lib/python3.8/site-packages/rospathgen/pathtester.py 
 
-Float32 topic '/limelight/angle_offset', a subscription in /shooter_intake/shooter_intake/shooter.py 
+srv_type=GetPath service srv_name='/get_path', a client in /worbots_code/copro_code/install/rospathgen/lib/python3.8/site-packages/rospathgen/pathgetter.py 
 
-Float32 topic '/limelight/range', a subscription in /shooter_intake/shooter_intake/shooter.py 
+BakePath service 'bake_path', a service in /worbots_code/copro_code/install/rospathgen/lib/python3.8/site-packages/rospathgen/pathservices.py 
 
-Int16 topic '/actions/intake_indexer', a subscription in /shooter_intake/shooter_intake/shooter.py
+GetPath service 'get_path', a service in /worbots_code/copro_code/install/rospathgen/lib/python3.8/site-packages/rospathgen/pathservices.py 
 
-StringService service '/externIO/shoot', a service in /shooter_intake/shooter_intake/shooter.py 
+BakePath service 'bake_path', a client in /worbots_code/copro_code/install/rospathgen/lib/python3.8/site-packages/rospathgen/pathbuilder.py 
 
-StringService service '/externIO/requestShot', a service in /shooter_intake/shooter_intake/shooter.py 
+BakePath service 'bake_path', a client in /worbots_code/copro_code/install/pathbuilder/lib/python3.8/site-packages/pathbuilder/pathbuilder.py 
 
-Float32 topic '/drive/heading_control', a publisher in /shooter_intake/shooter_intake/shooter.py 
+Int32 topic 'ERROR', a publisher in /worbots_code/copro_code/src/AutonomousBehaviorTree/autonomous_behavior_tree/src/rclcpp_logger.cpp 
 
-Bool topic '/externIO/hood_motor/is_reset', a subscription in /shooter_intake/shooter_intake/shooter.py 
+Trigger service 'dummy_srv_trig', a service in /worbots_code/copro_code/src/2022VisionCode/2022vision/install/robot_tools/lib/python3.8/site-packages/robot_tools/DummyTestSrv.py 
 
-MotorMsg topic '/externIO/hood_motor/demand', a publisher in /shooter_intake/shooter_intake/shooter.py 
+StringService service 'dummy_srv_str', a service in /worbots_code/copro_code/src/2022VisionCode/2022vision/install/robot_tools/lib/python3.8/site-packages/robot_tools/DummyTestSrv.py 
 
-MotorMsg topic '/externIO/flywheel_motor/demand', a publisher in /shooter_intake/shooter_intake/shooter.py 
+Trigger service 'dummy_srv_trig', a service in /worbots_code/copro_code/src/robotTool/robot_tools/robot_tools/DummyTestSrv.py 
 
-MotorMsg topic '/externIO/delivery_motor/demand', a publisher in /shooter_intake/shooter_intake/shooter.py 
+StringService service 'dummy_srv_str', a service in /worbots_code/copro_code/src/robotTool/robot_tools/robot_tools/DummyTestSrv.py 
 
-MotorMsg topic '/externIO/indexer_motor/demand', a publisher in /shooter_intake/shooter_intake/shooter.py 
+Bool topic '/sys/reset', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/SubsystemManager.cpp 
 
-MotorMsg topic '/externIO/intake_motor/demand', a publisher in /shooter_intake/shooter_intake/shooter.py 
+Bool topic '/sys/debug', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/SubsystemManager.cpp 
+
+Int16 topic '/lights/mode', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/LightBar.cpp 
+
+Int16 topic '/battery/idle', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/Battery.cpp 
+
+Int16 topic '/battery/idle', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/Battery.cpp 
+
+Int16 topic '/battery/idle', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/Battery.cpp 
+
+Twist topic '/drive/dt/velocity', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Pose2D topic '/drive/dt/pose', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Float32 topic '/drive/dt/heading', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Waypoint topic '/drive/auto/lookahead_point', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Float32 topic '/drive/auto/lookahead_point_angle', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Int16 topic '/drive/control_mode_echo', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Int16 topic '/drive/control_mode', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Int16 topic '/actions/heading_control', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+StringService service '/drive/start_path', a service in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/drivetrain.cpp 
+
+Joy topic '/sticks/stick', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/userinput.cpp 
+
+MotorMsg topic '/externIO/', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+JointState topic '/externIO/', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+SetPIDFGains service '/externIO/', a service in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+MotorMsg topic '/externIO/', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+JointState topic '/externIO/', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+SetPIDFGains service '/externIO/', a service in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+Int16 topic '/externIO/', a subscription in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+Bool topic '/externIO/upper_hood/limit_switch', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+Bool topic '/externIO/lower_hood/limit_switch', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/subsystems/externIO.cpp 
+
+Float32 topic '/drive/', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/robot_lib/util/PIDF.cpp 
+
+Float32 topic '/drive/', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/robot_lib/util/PIDF.cpp 
+
+SetPIDFGains service '/drive/', a service in /worbots_code/rio_code/2022RobotCode/src/main/cpp/robot_lib/util/PIDF.cpp 
+
+JointState topic '/drive/', a publisher in /worbots_code/rio_code/2022RobotCode/src/main/cpp/robot_lib/SModule.cpp 
+
+SetPIDFGains service '/drive/', a service in /worbots_code/rio_code/2022RobotCode/src/main/cpp/robot_lib/SModule.cpp 
+
+SetPIDFGains service '/drive/', a service in /worbots_code/rio_code/2022RobotCode/src/main/cpp/robot_lib/SModule.cpp 
+
